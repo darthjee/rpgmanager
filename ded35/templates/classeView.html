@@ -1,0 +1,29 @@
+{% extends "basic.html" %}
+
+{% block title %}
+Classe - {{ classe.nome }}
+{% endblock %}
+
+{% block body %}
+<div id="classe-{{classe.classe.id}}">
+	<div>
+		<img src="{{MEDIA_URL}}/{{classe.classe.displayAvatar}}" />
+	</div>
+	<table class="level-adv">
+		<thead>
+			<tr>
+				<th>Lvl</th>
+				<th>BAB</th>
+				<th>Will</th>
+				<th>Fort</th>
+				<th>Ref</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+</div>
+<script>
+	$('#classe-{{classe.classe.id}}').fillClasse({{classe.classe.id}})
+</script>
+
+{% endblock %}

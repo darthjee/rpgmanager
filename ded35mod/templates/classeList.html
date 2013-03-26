@@ -1,0 +1,32 @@
+{% extends "basic.html" %}
+
+{% block title %}
+Classe - {{ classe.nome }}
+{% endblock %}
+
+{% block content %}
+
+	<h2>Classes</h2>
+	
+	<h3>Básicas</h3>
+	<ul>
+		{% for c in classes.basicas %}
+			<li><a href="../show/{{ c.id }}">{{ c.nome }}</a></li>
+		{% endfor %}
+	</ul>
+	
+	<h3>Prestigio</h3>
+	<ul>
+		{% for c in classes.prestigio %}
+			<li><a href="../show/{{ c.id }}">{{ c.nome }}</a></li>
+		{% endfor %}
+	</ul>
+	
+	<h3>Monstro</h3>
+	<ul>
+		{% for c in classes.monstro %}
+			<li><a href="../show/{{ c.id }}">{{ c.nome }}</a></li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}
